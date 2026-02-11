@@ -1,70 +1,75 @@
+"use client";
+import { useRouter } from'next/navigation';
+
 function Footer(){
+  const router = useRouter();
+
     return (
-        <>
-        
-{/* Bottm Connect Section */}
-      <div className="bg-[#09a9a9]">
-        <div>
-          <h3>Lilac Template</h3>
-          <p>123 Example Road Minneapolis, MN</p>
-          <a>
-            <p>email@example.com</p>
-          </a>
-          <a>
-            <p>(555)555-5555</p>
-          </a>
-        </div>
-        <div>
+      <>
+        {/* Bottm Connect Section */}
+        <div className="bg-[#09a9a9]">
           <div>
-            <h3>Hours</h3>
-            <p>Monday - Friday</p>
-            <p>10am - 6pm</p>
+            <h3>Lilac Template</h3>
+            <p>123 Example Road Minneapolis, MN</p>
+            <a>
+              <p>email@example.com</p>
+            </a>
+            <a>
+              <p>(555)555-5555</p>
+            </a>
           </div>
           <div>
-            <h3>Find</h3>
-            <a>
-            <p>Home</p>
-            </a>
-            <a>
-            <p>Contact</p>
-            </a>
-            <a>
-            <p>Blog</p>
-            </a>
+            <div>
+              <h3>Hours</h3>
+              <p>Monday - Friday</p>
+              <p>10am - 6pm</p>
+            </div>
+            <div>
+              <h3>Find</h3>
+              <p
+                onClick={() => router.push("/home")}
+                className="hover:cursor-pointer"
+              >
+                Home
+              </p>
+              <p
+                onClick={() => router.push("/contacts")}
+                className="hover:cursor-pointer"
+              >
+                Contact
+              </p>
+              <p
+                onClick={() => router.push("/blog")}
+                className="hover:cursor-pointer"
+              >
+                Blog
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      {/* Footer section */}
-      <footer>
-        <div>
-        <ul>
-          <li>
-            <a>
-              Privacy &amp; Cookies Policy
-            </a>
-          </li>
-          <li>
-            <a>
-              Good Faith Estimate
-            </a>
-          </li>
-          <li>
-            <a>
-              website terms &amp; Conditions
-            </a>
-          </li>
-          <li>
-            <a>
-              Disclaimer
-            </a>
-          </li>
-        </ul>
-        <p>website Template Credits: <a>Go Bloom Creative</a></p>
-        </div>
-        <p>
-          All Rights Reserved &copy; 2024 your Business Name Here, LLC.
-        </p>
-      </footer>
+        {/* Footer section */}
+        <footer>
+          <div>
+            <ul>
+              <li>
+                <a>Privacy &amp; Cookies Policy</a>
+              </li>
+              <li>
+                <a>Good Faith Estimate</a>
+              </li>
+              <li>
+                <a>website terms &amp; Conditions</a>
+              </li>
+              <li>
+                <a>Disclaimer</a>
+              </li>
+            </ul>
+            <p>
+              website Template Credits: <a>Go Bloom Creative</a>
+            </p>
+          </div>
+          <p>All Rights Reserved &copy; 2024 your Business Name Here, LLC.</p>
+        </footer>
       </>
     );
 }

@@ -1,3 +1,7 @@
+"use client";
+
+import { useRouter } from 'next/navigation'
+
 import Image from "next/image";
 import i1 from '../public/i1.webp';
 import i2 from '../public/i2.webp';
@@ -12,6 +16,8 @@ import FOOTER from "./Footer"
 import HEADER from './Header'
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <>
     <HEADER />      
@@ -161,7 +167,7 @@ export default function Home() {
           <p>
             I&apos;m commited to providing a safe and supportive environment where we can explore your thoughts, feelings, and behaviors. With empathy and guidance, we&apos;ll work together to navigate the challenges life throws you way.
           </p>
-          <button>
+          <button onClick={()=>router.push('/contacts')}>
             LET&apos;S CHAT &rarr;
           </button>
         </div>
