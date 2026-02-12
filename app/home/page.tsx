@@ -1,8 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-
 import Image from "next/image";
+import { ArrowRight, CheckCircle2, Plus } from 'lucide-react';
 import i1 from "../../public/i1.webp";
 import i2 from "../../public/i2.webp";
 import i3 from "../../public/i3.webp";
@@ -18,241 +18,158 @@ import HEADER from "../Header";
 export default function Home() {
   const router = useRouter();
 
+  // Reusable Tailwind Styles based on your criteria
+  const sectionWrapper = "min-h-[60vh] w-full flex items-center justify-center py-20 px-6 overflow-hidden";
+  const contentContainer = "max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center text-center md:text-left";
+  const h2Heading = "font-sans font-bold text-4xl md:text-6xl tracking-tighter text-gray-900 mb-6 leading-tight";
+  const h3Heading = "font-sans font-bold text-2xl md:text-3xl text-purple-800 mb-4 uppercase tracking-tight";
+  const bodyText = "text-gray-600 font-sans text-lg leading-relaxed mb-8 max-w-xl mx-auto md:mx-0";
+  const btnAccent = "group flex items-center gap-2 bg-emerald-600 text-white px-8 py-4 rounded-full font-sans font-bold hover:bg-emerald-700 transition-all shadow-lg mx-auto md:mx-0";
+
   return (
-    <>
+    <div className="bg-white selection:bg-purple-200">
       <HEADER />
 
-      <div className="flex justify-between">
-        <figure>
-          <Image
-            width={200}
-            height={300}
-            className="object-cover"
-            src={i1}
-            alt="flower Pic"
-          />
-        </figure>
-        <div className="grid">
-          <h2>Live your life in full bloom</h2>
-          <p>therapy for Adults in Minneapollis, MN.</p>
-          <button className="border p-3">Connect With Me &rarr;</button>
-        </div>
-      </div>
-
-      <div className="grid grid-cols-2">
-        <div>
-          <div>
-            <h3>live a fulfilling life.</h3>
-            <p>
-              Life can be challenging&mdash;especially when you&apos;re trying
-              to balance your personal and professional life.
+      {/* --- HERO SECTION --- */}
+      <section className={`${sectionWrapper} bg-purple-50`}>
+        <div className={contentContainer}>
+          <div className="order-2 md:order-1">
+            <h2 className={h2Heading}>
+              Live your life in <span className="text-purple-500 italic font-light">full bloom</span>
+            </h2>
+            <p className={bodyText}>
+              Boutique therapy for adults in Minneapolis, MN. We focus on growth, healing, and personal evolution.
             </p>
-            <p>
-              It&apos;s easy to feel like you&apos;re alone in facing these
-              challenges, but I want you to know that I&apos;m here to help
-            </p>
+            <button className={btnAccent}>
+              Connect With Me <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </button>
           </div>
-          <button>GET IN TOUCH&rarr;</button>
-        </div>
-        <figure>
-          <Image
-            alt="flower"
-            height={400}
-            width={400}
-            className="object-cover"
-            src={i2}
-          />
-        </figure>
-      </div>
-
-      {/* Specialirities */}
-      <div className="my-4">
-        <h2 className="text-center my-3">My Specialities</h2>
-        {/* Speciliarity Section */}
-        <div className="flex">
-          <div>
-            <h3>Self-esteem</h3>
-            <p>
-              Building a strong sense of self-worth is key to living a fulfilled
-              life. Let&apos;s work together to boister your self-esteem
-            </p>
-            <Image
-              alt="flower"
-              height={400}
-              width={400}
-              className="rounded-full object-cover"
-              src={i3}
-            />
-          </div>
-
-          <div>
-            <h3>relationships</h3>
-            <p>
-              Navigate relationships can be complex. I&apos;m here to guide you
-              through these complexities to help you from healthier connections.
-            </p>
-            <Image
-              alt="flower"
-              height={400}
-              width={110}
-              className="rounded-full object-cover"
-              src={i4}
-            />
-          </div>
-
-          <div>
-            <h3>burnout</h3>
-            <p>
-              Feeling overwhelmed by your career is more common than you think.
-              Together, we&apos;ll identify strategies to manage and prevent
-              burnout.
-            </p>
-            <Image
-              alt="flower"
-              height={400}
-              width={400}
-              className="rounded-full object-cover h-40 w-40"
-              src={i5}
-            />
+          <div className="order-1 md:order-2 flex justify-center">
+            <div className="relative w-64 h-80 md:w-80 md:h-[450px] border-[12px] border-white shadow-2xl rounded-t-full overflow-hidden">
+              <Image src={i1} alt="Bloom" fill className="object-cover" priority />
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="flex">
-        <figure>
-          <Image
-            alt="flower"
-            height={400}
-            width={400}
-            src={i6}
-            className="w-50"
-          />
-        </figure>
-        <div>
-          <h2>
-            You don&apos;t have to do this all <i>alone</i>
-          </h2>
-          <p>If you are facing any of these, there&apos;s hope:</p>
-          <ul>
-            <li>Persistent feelings of sadness or hopelessness</li>
-            <li>Trouble focusing or making decisions</li>
-            <li>Difficulty maintaining relationships</li>
-            <li>Feeling constantly exhausted or unmotivated</li>
-            <li>A pervasive sense of being overwhelmed</li>
-          </ul>
-          <p>
-            With empathy and guidance. we&apos;ll work together to navigate the
-            challenges life throws your way.
-          </p>
-          <button>WORK WITH ME &rarr;</button>
+      {/* --- MISSION SECTION --- */}
+      <section className={`${sectionWrapper} bg-white`}>
+        <div className={contentContainer}>
+          <div className="flex justify-center">
+            <Image src={i2} alt="Life" width={400} height={500} className="rounded-2xl shadow-xl grayscale hover:grayscale-0 transition-all duration-700 border border-purple-100" />
+          </div>
+          <div>
+            <h3 className={h3Heading}>live a fulfilling life.</h3>
+            <p className={bodyText}>
+              Life can be challenging—especially when you&apos;re trying to balance your personal and professional life.
+            </p>
+            <p className={bodyText}>
+              It&apos;s easy to feel like you&apos;re alone, but I want you to know that I&apos;m here to help you find clarity and warmth.
+            </p>
+            <button className="text-emerald-600 font-bold border-b-2 border-emerald-600 pb-1 hover:text-purple-600 hover:border-purple-600 transition-all uppercase tracking-widest text-sm">
+              Get in touch &rarr;
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="grid grid-cols-2">
-        <div>
-          <h2>Hi, I&apos;m Lilac.</h2>
-          <p>
-            I&apos;m commited to providing a safe and supportive environment
-            where we can explore your thoughts, feelings, and behaviors. With
-            empathy and guidance, we&apos;ll work together to navigate the
-            challenges life throws you way.
-          </p>
-          <button onClick={() => router.push("/contacts")}>
-            LET&apos;S CHAT &rarr;
+      {/* --- SPECIALITIES SECTION --- */}
+      <section className={`${sectionWrapper} bg-purple-50/30 flex-col`}>
+        <h2 className="font-sans font-bold text-4xl text-center mb-16 text-gray-900">My Specialities</h2>
+        <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            { title: "Self-esteem", img: i3, desc: "Work together to bolster your self-worth and inner dialogue." },
+            { title: "Relationships", img: i4, desc: "Navigate complex connections to form healthier, deeper bonds." },
+            { title: "Burnout", img: i5, desc: "Identify strategies to manage career stress and reclaim your energy." }
+          ].map((spec, i) => (
+            <div key={i} className="bg-white p-10 rounded-3xl border border-purple-100 text-center hover:-translate-y-2 transition-transform shadow-sm hover:shadow-xl">
+              <div className="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-purple-50">
+                <Image src={spec.img} alt={spec.title} fill className="object-cover" />
+              </div>
+              <h4 className="text-xl font-bold text-gray-900 mb-4 uppercase tracking-tighter">{spec.title}</h4>
+              <p className="text-gray-500 text-sm leading-relaxed">{spec.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* --- EMPATHY SECTION --- */}
+      <section className={`${sectionWrapper} bg-emerald-900 text-white`}>
+        <div className={contentContainer}>
+          <div className="relative flex justify-center">
+            <Image src={i6} alt="Hope" width={350} height={450} className="rounded-3xl border border-emerald-700/50" />
+          </div>
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8">You don&apos;t have to do this all <i className="text-emerald-300">alone</i></h2>
+            <ul className="space-y-4 mb-10">
+              {["Persistent feelings of sadness", "Trouble making decisions", "Difficulty maintaining relationships", "Constant exhaustion"].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 font-sans text-emerald-50">
+                  <CheckCircle2 className="text-emerald-400" size={20} /> {item}
+                </li>
+              ))}
+            </ul>
+            <button className="bg-white text-emerald-900 px-10 py-4 rounded-full font-bold hover:bg-purple-100 transition-colors uppercase tracking-widest text-xs">
+              Work with me &rarr;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* --- ABOUT BIO SECTION --- */}
+      <section className={`${sectionWrapper} bg-white`}>
+        <div className={contentContainer}>
+          <div className="text-left">
+            <h2 className={h2Heading}>Hi, I&apos;m <span className="text-purple-600">Lilac.</span></h2>
+            <p className={bodyText}>
+              I&apos;m committed to providing a safe and supportive environment where we can explore your thoughts, feelings, and behaviors with clinical expertise and warmth.
+            </p>
+            <button onClick={() => router.push("/contacts")} className={btnAccent}>
+              Let&apos;s Chat &rarr;
+            </button>
+          </div>
+          <div className="relative h-[500px] flex items-center justify-center">
+            <Image src={i7} alt="Lilac" width={300} height={400} className="rounded-t-full shadow-2xl z-10 border-8 border-white" />
+            <Image src={i8} alt="Lilac Accent" width={180} height={180} className="rounded-full absolute bottom-4 right-10 md:right-0 border-8 border-purple-50 shadow-2xl z-20" />
+          </div>
+        </div>
+      </section>
+
+      {/* --- FAQ SECTION --- */}
+      <section className={`${sectionWrapper} bg-purple-50/50`}>
+        <div className="max-w-4xl w-full grid md:grid-cols-2 gap-12 items-start">
+          <div className="flex justify-center">
+            <Image src={i9} alt="FAQ" width={280} height={380} className="rounded-t-full shadow-lg" />
+          </div>
+          <div className="space-y-6 text-left">
+            <h2 className={h3Heading}>FAQs</h2>
+            {[
+              { q: "Do you take insurance?", a: "I am an out-of-network provider but can provide superbills." },
+              { q: "What are your rates?", a: "Please contact me for current rates and sliding scale availability." },
+              { q: "Do you have any openings?", a: "Contact me to check current availability for new clients." }
+            ].map((faq, i) => (
+              <div key={i} className="border-b border-purple-200 pb-4 group cursor-pointer">
+                <div className="flex justify-between items-center text-gray-900 font-bold uppercase text-sm tracking-widest group-hover:text-emerald-600 transition-colors">
+                  {faq.q} <Plus size={16} />
+                </div>
+                <p className="mt-2 text-gray-500 text-sm italic font-light">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* --- CTA BOTTOM --- */}
+      <section className={`${sectionWrapper} bg-emerald-600 text-white text-center`}>
+        <div className="max-w-3xl">
+          <h3 className="text-4xl md:text-5xl font-bold mb-6 tracking-tighter">Get started today.</h3>
+          <p className="text-emerald-50 text-xl mb-10 font-light">Ready to take the first step towards a happier, healthier you? Let&apos;s start this therapeutic journey together.</p>
+          <button className="bg-white text-emerald-600 px-12 py-5 rounded-full font-sans font-bold hover:scale-105 transition-transform shadow-2xl">
+            GET IN TOUCH &rarr;
           </button>
         </div>
-        <figure>
-          <Image
-            alt="flower"
-            height={400}
-            width={400}
-            src={i7}
-            className="rounded-t-full w-50 object-cover z-0"
-          />
-          <Image
-            height={400}
-            width={400}
-            alt="flower"
-            src={i8}
-            className="rounded-full relative z-1 h-30 w-30 object-cover -top-20 left-30"
-          />
-        </figure>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="flex justify-around">
-        <figure>
-          <Image
-            alt="flower"
-            height={400}
-            width={400}
-            src={i9}
-            className="rounded-t-full w-40"
-          />
-        </figure>
-        <div>
-          <h2>FAQs</h2>
-          <hr />
-          <div>
-            <h3>Do you take insurance?</h3>
-            <p>Answer goes here.</p>
-          </div>
-          <hr />
-          <div>
-            <h3>What are your rates?</h3>
-            <p>Answer goes here.</p>
-          </div>
-          <hr />
-          <div>
-            <h3>do you have any openings?</h3>
-            <p>Answer goes here.</p>
-          </div>
-        </div>
-      </div>
-      {/* About My Bsckground */}
-      <div>
-        <h2>My Professional Background</h2>
-        <hr />
-        <div>
-          <h3>Education</h3>
-          <p>
-            Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia
-            false artemesia moluccella gladiolus cirsium trollius anthurium
-            prunus delphinium achillea.
-          </p>
-        </div>
-        <hr />
-        <div>
-          <h3>Licensure</h3>
-          <p>
-            Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia
-            false artemesia moluccella gladiolus cirsium trollius anthurium
-            prunus delphinium achillea.
-          </p>
-        </div>
-        <hr />
-        <div>
-          <h3>Certifications</h3>
-          <p>
-            Euphorbia dianthus alchemilla muscari lavandula anthurium artemesia
-            false artemesia moluccella gladiolus cirsium trollius anthurium
-            prunus delphinium achillea.
-          </p>
-        </div>
-        <hr />
-      </div>
-
-      <div>
-        <h3>Get started today.</h3>
-        <p>Ready to take the first step towards a happier, healthier you? </p>
-        <p>
-          Contact me to book your first session. I look forward to starting this
-          therapeutic journey with you.
-        </p>
-        <button>GET IN TOUCH &rarr;</button>
-      </div>
+      </section>
 
       <FOOTER />
-    </>
+    </div>
   );
 }
