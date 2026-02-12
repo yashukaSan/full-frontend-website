@@ -54,9 +54,9 @@ function BlogPostFour() {
                 size={40}
               />
               <p className="text-2xl font-['Lora'] font-medium text-pink-900 italic leading-relaxed">
-                &ldquo;If you read the words back and don&apos;t hear your own voice
-                in your head, that&apos;s a good sign you still have more work
-                to do.&rdquo;
+                &ldquo;If you read the words back and don&apos;t hear your own
+                voice in your head, that&apos;s a good sign you still have more
+                work to do.&rdquo;
               </p>
             </div>
 
@@ -67,20 +67,20 @@ function BlogPostFour() {
             </p>
 
             <p className="text-pink-900/80 font-['Open_Sans'] text-lg leading-relaxed mb-6">
-              Be clear, be confident and don&apos;t overthink it. The beauty of your
-              story is that it&apos;s going to continue to evolve and your site
-              can evolve with it. Your goal should be to make it feel right for
-              right now. Later will take care of itself. It always does.
+              Be clear, be confident and don&apos;t overthink it. The beauty of
+              your story is that it&apos;s going to continue to evolve and your
+              site can evolve with it. Your goal should be to make it feel right
+              for right now. Later will take care of itself. It always does.
             </p>
           </div>
 
           {/* --- NAVIGATION: Raleway Bold --- */}
           <div className="pt-10 border-t border-pink-100 flex justify-between items-center">
             <button
-              onClick={() => router.back()}
+              onClick={() => router.push('/blog/blogpostthree')}
               className="group flex items-center gap-2 text-pink-500 font-['Raleway'] font-bold text-sm tracking-widest uppercase transition-all hover:gap-4 hover:text-pink-700"
             >
-              <ArrowLeft size={18} /> Back to Blog
+              <ArrowLeft size={18} /> Previos Blog
             </button>
 
             <div className="flex gap-2">

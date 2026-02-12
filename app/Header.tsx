@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Menu, X, Sparkles } from "lucide-react";
 
@@ -57,8 +57,17 @@ const Header = ({ blog, contact }: { blog?: boolean; contact?: boolean }) => {
           >
             Contact
           </p>
+          <p
+            onClick={() => router.push("/office")}
+            className={`${linkClass} ${contact ? activeClass : ""}`}
+          >
+            Office
+          </p>
           {/* CTA Button: Sakura Pink with Soft Shadow */}
-          <button className="ml-4 px-6 py-2 bg-pink-500 text-white text-sm font-['Raleway'] font-bold rounded-full hover:bg-pink-600 transition-all shadow-md shadow-pink-100 hover:shadow-pink-200">
+          <button
+            onClick={() => router.push("/aboutme")}
+            className="ml-4 px-6 py-2 bg-pink-500 text-white text-sm font-['Raleway'] font-bold rounded-full hover:bg-pink-600 transition-all shadow-md shadow-pink-100 hover:shadow-pink-200"
+          >
             Get Started
           </button>
         </nav>
@@ -76,13 +85,13 @@ const Header = ({ blog, contact }: { blog?: boolean; contact?: boolean }) => {
 
       {/* MOBILE DROPDOWN */}
       {isOpen && (
-        <div className="absolute top-[100%] left-0 w-full bg-white border-b border-pink-100 shadow-xl flex flex-col p-8 z-50 min-[800px]:hidden animate-in slide-in-from-top-2 duration-300">
+        <div className="absolute top-full left-0 w-full bg-white border-b border-pink-100 shadow-xl flex flex-col p-8 z-50 min-[800px]:hidden animate-in slide-in-from-top-2 duration-300">
           <p
             onClick={() => {
               router.push("/blog");
               setIsOpen(false);
             }}
-            className="py-4 text-lg font-['Raleway'] font-semibold text-pink-950 border-b border-pink-50 flex justify-between items-center"
+            className="py-4 text-lg font-['Raleway'] font-semibold text-pink-950 border-b border-pink-50 flex justify-between items-center hover:cursor-pointer"
           >
             Blog <span className="text-pink-400">→</span>
           </p>
@@ -91,11 +100,20 @@ const Header = ({ blog, contact }: { blog?: boolean; contact?: boolean }) => {
               router.push("/contacts");
               setIsOpen(false);
             }}
-            className="py-4 text-lg font-['Raleway'] font-semibold text-pink-950 flex justify-between items-center"
+            className="py-4 text-lg font-['Raleway'] font-semibold text-pink-950 flex justify-between items-center hover:cursor-pointer"
           >
             Contact <span className="text-pink-400">→</span>
           </p>
-          <button className="mt-6 w-full py-4 bg-pink-500 text-white rounded-2xl font-['Raleway'] font-bold shadow-lg shadow-pink-100">
+          <p
+            onClick={() => {
+              router.push("/office");
+              setIsOpen(false);
+            }}
+            className="py-4 text-lg font-['Raleway'] font-semibold text-pink-950 flex justify-between items-center hover:cursor-pointer"
+          >
+            Our Office <span className="text-pink-400">→</span>
+          </p>
+          <button className="mt-6 w-full py-4 bg-pink-500 text-white rounded-2xl font-['Raleway'] font-bold shadow-lg shadow-pink-100 hover:cursor-pointer">
             Work With Me
           </button>
         </div>

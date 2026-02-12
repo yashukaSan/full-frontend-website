@@ -5,14 +5,13 @@ import Image from "next/image";
 import { ArrowRight, CheckCircle2, Plus } from 'lucide-react';
 // Import Google Fonts in your layout.tsx or globals.css for these classes to work
 import i1 from '../public/i1.webp';
-import i2 from '../public/i2.webp';
+import i2 from '../public/s5.jpg';
 import i3 from '../public/i3.webp';
 import i4 from '../public/i4.webp';
 import i5 from '../public/i5.webp';
 import i6 from '../public/i6.webp';
 import i7 from '../public/i7.webp';
 import i8 from '../public/i8.webp';
-import i9 from '../public/i9.webp';
 import FOOTER from "./Footer";
 import HEADER from './Header';
 
@@ -26,7 +25,7 @@ export default function Home() {
   // Typography Constants
   const headingLg = "font-['Raleway'] md:font-['Libre_Baskerville'] font-bold text-4xl md:text-6xl tracking-tight text-pink-950 leading-tight mb-6";
   const headingMd = "font-['Raleway'] font-bold text-3xl text-pink-900 mb-4 uppercase tracking-widest";
-  const subHeading = "font-['Lora'] italic text-2xl text-pink-700 mb-4";
+  //const subHeading = "font-['Lora'] italic text-2xl text-pink-700 mb-4";
   const bodyText = "text-pink-900/80 font-['Roboto'] font-['Open_Sans'] text-lg leading-relaxed mb-8 max-w-xl";
   const quoteText = "font-['Lora'] italic text-pink-800";
   
@@ -46,7 +45,7 @@ export default function Home() {
             <p className={bodyText}>
               Compassionate therapy for adults navigating life transitions in Minneapolis, MN.
             </p>
-            <button className={btnPrimary}>
+            <button className={btnPrimary} onClick={()=>router.push('/aboutme')} >
               Connect With Me <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </button>
           </div>

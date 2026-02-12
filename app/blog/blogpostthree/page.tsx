@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation";
 import Header from "../../Header";
 import Footer from "../../Footer";
-import { ArrowLeft, Calendar, Quote, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Quote, Sparkles } from "lucide-react";
 
 function BlogPostFour() {
   const router = useRouter();
@@ -81,15 +81,24 @@ function BlogPostFour() {
           {/* --- NAVIGATION: Raleway Bold Pink --- */}
           <div className="pt-10 border-t border-pink-100 flex justify-between items-center">
             <button
-              onClick={() => router.back()}
+              onClick={() => router.push('/blog/blogposttwo')}
               className="group flex items-center gap-2 text-pink-500 font-['Raleway'] font-bold text-sm tracking-widest uppercase transition-all hover:gap-4 hover:text-pink-700"
             >
-              <ArrowLeft size={18} /> Back to Blog
-            </button>
-
-            <div className="flex gap-2">
+              <ArrowLeft size={18} /> Previous Blog
               <Sparkles size={18} className="text-pink-200" />
+            </button>
+            <div className="flex items-center gap-4">
+              <div className="flex gap-2">
+                <Sparkles size={18} className="text-pink-200" />
+              </div>
+              <button
+                onClick={() => router.push("/blog/blogpostfour")}
+                className="group flex items-center gap-2 text-pink-500 font-['Raleway'] font-bold text-sm tracking-widest uppercase transition-all hover:gap-4 hover:text-pink-700"
+              >
+                Next Post <ArrowRight size={18} />
+              </button>
             </div>
+
           </div>
         </article>
       </main>

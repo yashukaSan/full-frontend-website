@@ -3,10 +3,10 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, Plus } from "lucide-react";
-import i1 from "../../public/i1.webp";
-import i2 from "../../public/i2.webp";
-import i3 from "../../public/i3.webp";
-import i4 from "../../public/i4.webp";
+import i1 from "../../public/s2.jpg";
+import i2 from "../../public/s7.jpg";
+import i3 from "../../public/s10.webp";
+import i4 from "../../public/s8.webp";
 import i5 from "../../public/i5.webp";
 import i6 from "../../public/i6.webp";
 import i7 from "../../public/i7.webp";
@@ -61,7 +61,7 @@ export default function Home() {
             </button>
           </div>
           <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative w-64 h-80 md:w-80 md:h-[450px] border-[12px] border-white shadow-2xl rounded-t-full overflow-hidden ring-1 ring-pink-100">
+            <div className="relative w-64 h-80 md:w-80 md:h-112.5 border-12 border-white shadow-2xl rounded-t-full overflow-hidden ring-1 ring-pink-100">
               <Image
                 src={i1}
                 alt="Bloom"
@@ -193,12 +193,16 @@ export default function Home() {
         <div className={contentContainer}>
           <div className="text-left">
             <h2 className={h2Heading}>
-              Hi, I&apos;m <span className="text-pink-500">Lilac.</span>
+              Hi, I&apos;m <span className="text-pink-500">Dr. Maya.</span>
             </h2>
             <p className={bodyText}>
-              I&apos;m committed to providing a safe and supportive environment
-              where we can explore your thoughts, feelings, and behaviors with
-              clinical expertise and warmth.
+              As a licensed clinical psychologist in Santa Monica, I help
+              high-achieving, self-aware adults transform internal exhaustion
+              into lasting emotional clarity. Whether you are navigating the
+              weight of past experiences or the constant noise of overthinking,
+              I offer a grounded space to move beyond &quot;just functioning.&quot;
+              Together, we will bridge the gap between your professional success
+              and your internal peace of mind.
             </p>
             <button
               onClick={() => router.push("/contacts")}
@@ -207,7 +211,7 @@ export default function Home() {
               Let&apos;s Chat &rarr;
             </button>
           </div>
-          <div className="relative h-[500px] flex items-center justify-center">
+          <div className="relative h-125 flex items-center justify-center">
             <Image
               src={i7}
               alt="Lilac"

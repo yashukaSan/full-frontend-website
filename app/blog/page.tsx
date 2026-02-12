@@ -25,7 +25,7 @@ function BlogPage() {
       {/* --- HERO SECTION: Sakura Soft Pink --- */}
       <section className={`${sectionBase} bg-[#fff5f7]`}>
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
-          <div className="relative w-48 h-64 md:w-64 md:h-80 border-[12px] border-white shadow-xl rounded-full overflow-hidden rotate-3 ring-1 ring-pink-50">
+          <div className="relative w-48 h-64 md:w-64 md:h-80 border-12 border-white shadow-xl rounded-full overflow-hidden rotate-3 ring-1 ring-pink-50">
             <Image fill className="object-cover" src={i1} alt="Lilac Blog" />
           </div>
           <div className="flex-1">
@@ -53,10 +53,10 @@ function BlogPage() {
       <section className={`${sectionBase} bg-white`}>
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 min-[800px]:grid-cols-2 gap-10">
-            {[1, 2, 3, 4].map((post) => (
+            {['blog/blogpostone', '/blog/blogposttwo', '/blog/blogpostthree', '/blog/blogpostfour'].map((post, index) => (
               <div
-                key={post}
-                onClick={() => router.push("/blog/blogposttwo")}
+                key={index}
+                onClick={() => router.push(post)}
                 className={blogCard}
               >
                 <div className="flex flex-col sm:flex-row h-full">
@@ -74,11 +74,11 @@ function BlogPage() {
                     </div>
                     <h3 className="text-2xl font-['Libre_Baskerville'] font-bold text-pink-950 mb-4 group-hover:text-pink-600 transition-colors">
                       Blog Post{" "}
-                      {post === 1
+                      {index === 0
                         ? "One"
-                        : post === 2
+                        : index === 1
                           ? "Two"
-                          : post === 3
+                          : index === 2
                             ? "Three"
                             : "Four"}
                     </h3>

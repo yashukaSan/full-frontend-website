@@ -1,10 +1,10 @@
 "use client";
 
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import HEADER from "../Header";
 import FOOTER from "../Footer";
 import {
-  Mail,
   Clock,
   MapPin,
   Instagram,
@@ -16,6 +16,7 @@ import i8 from "../../public/i8.webp";
 import i7 from "../../public/i7.webp";
 
 function Contacts() {
+  const router = useRouter();
   // Sakura Theme Constants
   const sectionBase =
     "min-h-[60vh] w-full flex flex-col items-center justify-center px-6 py-20 overflow-hidden";
@@ -62,7 +63,7 @@ function Contacts() {
             </div>
           </div>
 
-          <div className="relative h-[500px] flex items-center justify-center">
+          <div className="relative h-125 flex items-center justify-center">
             <Image
               alt="flower"
               width={350}
@@ -107,7 +108,9 @@ function Contacts() {
       {/* --- MAP & OFFICE: Sakura Card --- */}
       <section className={`${sectionBase} bg-[#fdf2f4]/30`}>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 w-full gap-0 rounded-[2.5rem] overflow-hidden shadow-2xl border border-pink-100">
-          <div className="bg-white p-12 md:p-20 flex flex-col justify-center">
+          <div
+           onClick={()=>router.push('/office')}
+           className="bg-white p-12 md:p-20 flex flex-col justify-center hover:cursor-pointer">
             <h2 className={headingMd}>My Office</h2>
             <div className="space-y-8">
               <div className="flex items-start gap-4">
@@ -133,7 +136,7 @@ function Contacts() {
               </div>
             </div>
           </div>
-          <div className="h-[400px] md:h-auto min-h-[400px] grayscale hover:grayscale-0 transition-all duration-1000">
+          <div className="h-100 md:h-auto min-h-100 grayscale hover:grayscale-0 transition-all duration-1000">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6614.361388403876!2d-118.498343500487!3d34.01357249268619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%20123th%20Street%2045%20W%2C%20Santa%20Monica%2C%20CA%2090401!5e0!3m2!1sen!2sin!4v1770838408453!5m2!1sen!2sin"
               width="100%"
