@@ -4,14 +4,13 @@ import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, Plus } from 'lucide-react';
 // Import Google Fonts in your layout.tsx or globals.css for these classes to work
-import i1 from '../public/i1.webp';
+import i1 from '../public/sk1.webp';
 import i2 from '../public/s5.jpg';
-import i3 from '../public/i3.webp';
-import i4 from '../public/i4.webp';
-import i5 from '../public/i5.webp';
-import i6 from '../public/i6.webp';
-import i7 from '../public/i7.webp';
-import i8 from '../public/i8.webp';
+import i3 from '../public/s4.jpg';
+import i4 from '../public/sk2.jpg';
+import i5 from '../public/s8.webp';
+import i6 from '../public/sk4.jpg';
+import i7 from '../public/DrMaya.png';
 import FOOTER from "./Footer";
 import HEADER from './Header';
 
@@ -101,7 +100,7 @@ export default function Home() {
       {/* --- PERSPECTIVE SECTION --- */}
       <section className={`${sectionBase} bg-pink-950 text-pink-50`}>
         <div className={container}>
-          <div className="relative">
+          <div className="relative z-1">
             <Image src={i6} alt="Support" width={400} height={500} className="rounded-3xl mix-blend-soft-light opacity-80" />
           </div>
           <div>
@@ -136,7 +135,6 @@ export default function Home() {
           </div>
           <div className="relative h-125">
              <Image src={i7} alt="Lilac" width={300} height={450} className="rounded-t-full absolute top-0 left-0 border-4 border-pink-50 shadow-xl" />
-             <Image src={i8} alt="Lilac Accent" width={200} height={200} className="rounded-full absolute bottom-10 right-10 border-8 border-white shadow-2xl" />
           </div>
         </div>
       </section>

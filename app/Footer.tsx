@@ -59,7 +59,7 @@ function Footer() {
               <h3 className="font-['Raleway'] font-bold text-pink-950 uppercase tracking-widest text-xs mb-2">
                 Explore
               </h3>
-              {["Home", "Contact", "Blog"].map((item) => (
+              {["Home", "Contacts", "Blog"].map((item) => (
                 <p
                   key={item}
                   onClick={() => router.push(`/${item.toLowerCase()}`)}

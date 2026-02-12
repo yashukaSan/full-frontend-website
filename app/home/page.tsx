@@ -3,15 +3,14 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { ArrowRight, CheckCircle2, Plus } from "lucide-react";
-import i1 from "../../public/s2.jpg";
+import i1 from "../../public/sk1.webp";
 import i2 from "../../public/s7.jpg";
 import i3 from "../../public/s10.webp";
-import i4 from "../../public/s8.webp";
-import i5 from "../../public/i5.webp";
-import i6 from "../../public/i6.webp";
-import i7 from "../../public/i7.webp";
-import i8 from "../../public/i8.webp";
-import i9 from "../../public/i9.webp";
+import i4 from "../../public/sk2.jpg";
+import i5 from "../../public/s8.webp";
+import i6 from "../../public/sk4.jpg";
+import i7 from "../../public/DrMaya.png";
+import i9 from "../../public/sk5.jpg";
 import FOOTER from "../Footer";
 import HEADER from "../Header";
 
@@ -152,7 +151,7 @@ export default function Home() {
       {/* --- EMPATHY SECTION: Deep Cherry Contrast --- */}
       <section className={`${sectionWrapper} bg-pink-950 text-white`}>
         <div className={contentContainer}>
-          <div className="relative flex justify-center">
+          <div className="z-1 relative flex justify-center">
             <Image
               src={i6}
               alt="Hope"
@@ -218,13 +217,6 @@ export default function Home() {
               width={300}
               height={400}
               className="rounded-t-full shadow-2xl z-10 border-8 border-white ring-1 ring-pink-50"
-            />
-            <Image
-              src={i8}
-              alt="Lilac Accent"
-              width={180}
-              height={180}
-              className="rounded-full absolute bottom-4 right-10 md:right-0 border-8 border-[#fff5f7] shadow-2xl z-20"
             />
           </div>
         </div>

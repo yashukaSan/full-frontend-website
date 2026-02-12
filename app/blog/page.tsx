@@ -5,7 +5,11 @@ import Header from "../Header";
 import Footer from "../Footer";
 import { useRouter } from "next/navigation";
 import { ArrowRight, Calendar, Sparkles } from "lucide-react";
-import i1 from "../../public/i1.webp";
+import i1 from "../../public/s1.webp";
+import i2 from "../../public/s2.jpg";
+import i3 from "../../public/s3.webp";
+import i4 from "../../public/s9.webp";
+import i5 from "../../public/s10.webp";
 
 function BlogPage() {
   const router = useRouter();
@@ -53,42 +57,52 @@ function BlogPage() {
       <section className={`${sectionBase} bg-white`}>
         <div className="max-w-7xl mx-auto w-full">
           <div className="grid grid-cols-1 min-[800px]:grid-cols-2 gap-10">
-            {['blog/blogpostone', '/blog/blogposttwo', '/blog/blogpostthree', '/blog/blogpostfour'].map((post, index) => (
-              <div
-                key={index}
-                onClick={() => router.push(post)}
-                className={blogCard}
-              >
-                <div className="flex flex-col sm:flex-row h-full">
-                  <div className="relative w-full sm:w-2/5 h-64 sm:h-auto overflow-hidden">
-                    <Image
-                      fill
-                      src={i1}
-                      alt="Post Thumbnail"
-                      className="object-cover group-hover:scale-110 transition-transform duration-700"
-                    />
-                  </div>
-                  <div className="p-8 flex flex-col justify-center flex-1">
-                    <div className="flex items-center gap-2 text-pink-400 text-xs font-['Open_Sans'] font-bold uppercase tracking-widest mb-3">
-                      <Calendar size={12} /> Feb 12, 2026
+            {[
+              { path: "/blog/blogpostone", loc: i2 },
+              { path: "/blog/blogposttwo", loc: i3 },
+              { path: "/blog/blogpostthree", loc: i4 },
+              { path: "/blog/blogpostfour", loc: i5 },
+            ].map(
+              (
+                post,
+                index, // Using ( ) instead of { } removes the need for 'return'
+              ) => (
+                <div
+                  key={index}
+                  onClick={() => router.push(post.path)}
+                  className={blogCard}
+                >
+                  <div className="flex flex-col sm:flex-row h-full">
+                    <div className="relative w-full sm:w-2/5 h-64 sm:h-auto overflow-hidden">
+                      <Image
+                        fill
+                        src={post.loc}
+                        alt="Post Thumbnail"
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
+                      />
                     </div>
-                    <h3 className="text-2xl font-['Libre_Baskerville'] font-bold text-pink-950 mb-4 group-hover:text-pink-600 transition-colors">
-                      Blog Post{" "}
-                      {index === 0
-                        ? "One"
-                        : index === 1
-                          ? "Two"
-                          : index === 2
-                            ? "Three"
-                            : "Four"}
-                    </h3>
-                    <p className="text-pink-500 font-['Raleway'] font-bold flex items-center gap-2 text-sm group-hover:gap-4 transition-all">
-                      Read More <ArrowRight size={16} />
-                    </p>
+                    <div className="p-8 flex flex-col justify-center flex-1">
+                      <div className="flex items-center gap-2 text-pink-400 text-xs font-['Open_Sans'] font-bold uppercase tracking-widest mb-3">
+                        <Calendar size={12} /> Feb 12, 2026
+                      </div>
+                      <h3 className="text-2xl font-['Libre_Baskerville'] font-bold text-pink-950 mb-4 group-hover:text-pink-600 transition-colors">
+                        Blog Post{" "}
+                        {index === 0
+                          ? "One"
+                          : index === 1
+                            ? "Two"
+                            : index === 2
+                              ? "Three"
+                              : "Four"}
+                      </h3>
+                      <p className="text-pink-500 font-['Raleway'] font-bold flex items-center gap-2 text-sm group-hover:gap-4 transition-all">
+                        Read More <ArrowRight size={16} />
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </div>
       </section>

@@ -92,7 +92,7 @@ function BlogPostFour() {
                 <Sparkles size={18} className="text-pink-200" />
               </div>
               <button
-                onClick={() => router.push("/blog/blogposttwo")}
+                onClick={() => router.push("/blog/blogpostthree")}
                 className="group flex items-center gap-2 text-pink-500 font-['Raleway'] font-bold text-sm tracking-widest uppercase transition-all hover:gap-4 hover:text-pink-700"
               >
                 Next Post <ArrowRight size={18} />

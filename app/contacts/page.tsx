@@ -12,8 +12,8 @@ import {
   Linkedin,
   ExternalLink,
 } from "lucide-react";
-import i8 from "../../public/i8.webp";
-import i7 from "../../public/i7.webp";
+import i8 from "../../public/DrMaya.png";
+import i7 from "../../public/s7.jpg";
 
 function Contacts() {
   const router = useRouter();
@@ -73,8 +73,8 @@ function Contacts() {
             />
             <Image
               alt="flower accent"
-              width={180}
-              height={180}
+              width={250}
+              height={200}
               src={i8}
               className="rounded-full absolute bottom-4 right-4 border-8 border-[#fff5f7] shadow-2xl z-10"
             />
