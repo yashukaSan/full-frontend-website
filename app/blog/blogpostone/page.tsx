@@ -35,7 +35,7 @@ function BlogPostFour() {
         </h1>
         <div className="mt-8 flex items-center gap-3">
           <div className="h-px w-12 bg-pink-200"></div>
-          <p className="text-pink-400 font-['Lora'] italic">By Lilac Studio</p>
+          <p className="text-pink-400 font-['Lora'] italic">By Sakura Theme</p>
           <div className="h-px w-12 bg-pink-200"></div>
         </div>
       </section>

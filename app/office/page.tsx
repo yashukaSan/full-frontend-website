@@ -3,12 +3,16 @@
 import Image from "next/image";
 import HEADER from "../Header";
 import FOOTER from "../Footer";
-import { MapPin, Sun, Wind, Coffee, Sparkles } from "lucide-react";
+import { MapPin, Clock, Sun, Wind, Coffee, Sparkles } from "lucide-react";
 import of1 from '../../public/office1.jpeg';
 import of2 from "../../public/office2.jpeg";
 import { useRouter } from 'next/navigation'
 
 export default function OfficePage() {
+  const sectionBase =
+    "min-h-[60vh] w-full flex flex-col items-center justify-center px-6 py-20 overflow-hidden";
+    const headingMd =
+      "font-['Raleway'] font-bold text-3xl text-pink-900 mb-4 uppercase tracking-widest";
     const router = useRouter();
   // Theme & Pattern Constants
   const sectionWrapper =
@@ -44,8 +48,8 @@ export default function OfficePage() {
               </span>
             </h1>
             <p className={quoteText}>
-              &quot;A quiet, private space designed to feel calm and grounding from
-              the moment you arrive.&quot;
+              &quot;A quiet, private space designed to feel calm and grounding
+              from the moment you arrive.&quot;
             </p>
             <p className={bodyText + " mt-6"}>
               Located in the heart of Santa Monica, my office serves as a
@@ -62,6 +66,7 @@ export default function OfficePage() {
                 fill
                 className="object-cover"
                 priority
+                placeholder="blur"
               />
             </div>
           </div>
@@ -79,6 +84,7 @@ export default function OfficePage() {
               width={450}
               height={600}
               className="rounded-3xl shadow-xl border border-pink-50"
+              placeholder="blur"
             />
           </div>
           <div>
@@ -155,11 +161,56 @@ export default function OfficePage() {
             office, as well as telehealth across California.
           </p>
           <button
-            onClick={() => router.push('/contacts')}
+            onClick={() => router.push("/contacts")}
             className="bg-white text-pink-950 px-10 py-4 rounded-full font-['Raleway'] font-bold hover:bg-pink-100 transition-all uppercase tracking-widest text-xs"
           >
             Book a Consultation &rarr;
           </button>
+        </div>
+      </section>
+
+      {/* --- MAP & OFFICE: Sakura Card --- */}
+      <section className={`${sectionBase} bg-[#fdf2f4]/30`}>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 w-full gap-0 rounded-[2.5rem] overflow-hidden shadow-2xl border border-pink-100">
+          <div
+            onClick={() => router.push("/office")}
+            className="bg-white p-12 md:p-20 flex flex-col justify-center hover:cursor-pointer"
+          >
+            <h2 className={headingMd}>My Office</h2>
+            <div className="space-y-8">
+              <div className="flex items-start gap-4">
+                <MapPin className="text-pink-500 mt-1" />
+                <p className="text-pink-900/70 font-['Open_Sans'] text-lg">
+                  123th Street 45 W,
+                  <br />
+                  Santa Monica, CA 90401
+                </p>
+              </div>
+              <div className="flex items-start gap-4">
+                <Clock className="text-pink-500 mt-1" />
+                <div>
+                  <p className="text-pink-950 font-['Raleway'] font-bold uppercase tracking-widest text-xs mb-2">
+                    Hours
+                  </p>
+                  <p className="text-pink-900/70 font-['Open_Sans'] text-lg">
+                    Monday — Friday
+                    <br />
+                    10am — 6pm
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="h-100 md:h-auto min-h-100 grayscale hover:grayscale-0 transition-all duration-1000">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6614.361388403876!2d-118.498343500487!3d34.01357249268619!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s%20123th%20Street%2045%20W%2C%20Santa%20Monica%2C%20CA%2090401!5e0!3m2!1sen!2sin!4v1770838408453!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </section>
 

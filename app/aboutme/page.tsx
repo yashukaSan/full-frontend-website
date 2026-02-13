@@ -6,6 +6,7 @@ import { ArrowRight, Heart, Wind, ShieldCheck, Sparkles } from "lucide-react";
 import HEADER from "../Header";
 import FOOTER from "../Footer";
 import maya from "../../public/DrMaya.png";
+import i1 from "../../public/s2.jpg";
 
 // Using the established pattern of 60vh blocks and grid layouts
 export default function AboutDrMaya() {
@@ -88,7 +89,7 @@ export default function AboutDrMaya() {
           <div className="relative group h-125">
             {/* Using Unsplash for Office/Therapy vibe since Drive links require auth */}
             <Image
-              src={maya}
+              src={i1}
               alt="Santa Monica Office"
               fill
               className="rounded-3xl object-cover shadow-xl grayscale hover:grayscale-0 transition-all duration-1000"
@@ -112,7 +113,7 @@ export default function AboutDrMaya() {
               from your own body.
             </p>
             <p className={bodyText}>
-              My goal isn’t just symptom relief—it’s helping you develop a
+              My goal isn&apos;t just symptom relief—it&apos;s helping you develop a
               stronger, more resilient relationship with yourself.
             </p>
 
@@ -204,7 +205,7 @@ export default function AboutDrMaya() {
             </div>
             <button
               onClick={() => router.push("/contacts")}
-              className="text-pink-500 font-['Raleway'] font-bold border-b-2 border-pink-500 pb-1 hover:text-pink-700 hover:border-pink-700 transition-all uppercase tracking-widest text-sm"
+              className="text-pink-500 hover:cursor-pointer font-['Raleway'] font-bold border-b-2 border-pink-500 pb-1 hover:text-pink-700 hover:border-pink-700 transition-all uppercase tracking-widest text-sm"
             >
               Schedule a Consultation &rarr;
             </button>

@@ -30,7 +30,13 @@ function BlogPage() {
       <section className={`${sectionBase} bg-[#fff5f7]`}>
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 text-center md:text-left">
           <div className="relative w-48 h-64 md:w-64 md:h-80 border-12 border-white shadow-xl rounded-full overflow-hidden rotate-3 ring-1 ring-pink-50">
-            <Image fill className="object-cover" src={i1} alt="Lilac Blog" />
+            <Image
+              fill
+              placeholder="blur"
+              className="object-cover"
+              src={i1}
+              alt="Lilac Blog"
+            />
           </div>
           <div className="flex-1">
             <div className="flex items-center justify-center md:justify-start gap-2 text-pink-500 font-['Raleway'] font-bold tracking-widest text-xs uppercase mb-4">
@@ -78,6 +84,7 @@ function BlogPage() {
                         fill
                         src={post.loc}
                         alt="Post Thumbnail"
+                        placeholder="blur"
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>

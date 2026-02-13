@@ -39,7 +39,7 @@ const Header = ({ blog, contact }: { blog?: boolean; contact?: boolean }) => {
             />
           </div>
           <h1 className="font-['Raleway'] font-bold text-xl tracking-tighter text-pink-950">
-            LILAC <span className="text-pink-400 font-light">STUDIO</span>
+            SAKURA <span className="text-pink-400 font-light">THEME</span>
           </h1>
         </div>
 
@@ -113,7 +113,9 @@ const Header = ({ blog, contact }: { blog?: boolean; contact?: boolean }) => {
           >
             Our Office <span className="text-pink-400">→</span>
           </p>
-          <button className="mt-6 w-full py-4 bg-pink-500 text-white rounded-2xl font-['Raleway'] font-bold shadow-lg shadow-pink-100 hover:cursor-pointer">
+          <button
+           onClick={()=>router.push('/aboutme')}
+           className="mt-6 w-full py-4 bg-pink-500 text-white rounded-2xl font-['Raleway'] font-bold shadow-lg shadow-pink-100 hover:cursor-pointer">
             Work With Me
           </button>
         </div>

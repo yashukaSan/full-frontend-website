@@ -69,6 +69,7 @@ function Contacts() {
               width={350}
               height={450}
               src={i7}
+              placeholder="blur"
               className="rounded-t-full shadow-2xl object-cover border-8 border-white ring-1 ring-pink-100"
             />
             <Image
@@ -76,6 +77,7 @@ function Contacts() {
               width={250}
               height={200}
               src={i8}
+              placeholder="blur"
               className="rounded-full absolute bottom-4 right-4 border-8 border-[#fff5f7] shadow-2xl z-10"
             />
           </div>
@@ -109,8 +111,9 @@ function Contacts() {
       <section className={`${sectionBase} bg-[#fdf2f4]/30`}>
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 w-full gap-0 rounded-[2.5rem] overflow-hidden shadow-2xl border border-pink-100">
           <div
-           onClick={()=>router.push('/office')}
-           className="bg-white p-12 md:p-20 flex flex-col justify-center hover:cursor-pointer">
+            onClick={() => router.push("/office")}
+            className="bg-white p-12 md:p-20 flex flex-col justify-center hover:cursor-pointer"
+          >
             <h2 className={headingMd}>My Office</h2>
             <div className="space-y-8">
               <div className="flex items-start gap-4">
@@ -168,6 +171,7 @@ function Contacts() {
                 <Image
                   alt="social post"
                   fill
+                  placeholder="blur"
                   src={i7}
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                 />

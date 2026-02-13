@@ -35,7 +35,7 @@ function BlogPostFour() {
         </h1>
         <div className="mt-8 flex items-center gap-3">
           <div className="h-px w-12 bg-pink-200"></div>
-          <p className="text-pink-400 font-['Lora'] italic">By Lilac Studio</p>
+          <p className="text-pink-400 font-['Lora'] italic">By Sakura Theme</p>
           <div className="h-px w-12 bg-pink-200"></div>
         </div>
       </section>
@@ -58,7 +58,7 @@ function BlogPostFour() {
                 size={40}
               />
               <p className="text-2xl font-['Lora'] font-medium text-pink-900 italic leading-relaxed">
-                &ldquo;If you read the words back and don’t hear your own voice
+                &ldquo;If you read the words back and don&apos;t hear your own voice
                 in your head, that&apos;s a good sign you still have more work
                 to do.&rdquo;
               </p>

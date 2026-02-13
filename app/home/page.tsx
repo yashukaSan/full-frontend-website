@@ -66,6 +66,7 @@ export default function Home() {
                 alt="Bloom"
                 fill
                 className="object-cover"
+                placeholder="blur"
                 priority
               />
             </div>
@@ -80,6 +81,7 @@ export default function Home() {
             <Image
               src={i2}
               alt="Life"
+              placeholder="blur"
               width={400}
               height={500}
               className="rounded-2xl shadow-xl grayscale hover:grayscale-0 transition-all duration-700 border border-pink-100"
@@ -134,6 +136,7 @@ export default function Home() {
                   src={spec.img}
                   alt={spec.title}
                   fill
+                  placeholder="blur"
                   className="object-cover"
                 />
               </div>
@@ -155,6 +158,7 @@ export default function Home() {
             <Image
               src={i6}
               alt="Hope"
+              placeholder="blur"
               width={350}
               height={450}
               className="rounded-3xl border border-pink-800 mix-blend-soft-light opacity-90"
@@ -199,9 +203,9 @@ export default function Home() {
               high-achieving, self-aware adults transform internal exhaustion
               into lasting emotional clarity. Whether you are navigating the
               weight of past experiences or the constant noise of overthinking,
-              I offer a grounded space to move beyond &quot;just functioning.&quot;
-              Together, we will bridge the gap between your professional success
-              and your internal peace of mind.
+              I offer a grounded space to move beyond &quot;just
+              functioning.&quot; Together, we will bridge the gap between your
+              professional success and your internal peace of mind.
             </p>
             <button
               onClick={() => router.push("/contacts")}
@@ -216,6 +220,7 @@ export default function Home() {
               alt="Lilac"
               width={300}
               height={400}
+              placeholder="blur"
               className="rounded-t-full shadow-2xl z-10 border-8 border-white ring-1 ring-pink-50"
             />
           </div>
@@ -231,6 +236,7 @@ export default function Home() {
               alt="FAQ"
               width={280}
               height={380}
+              placeholder="blur"
               className="rounded-t-full shadow-lg border-4 border-white"
             />
           </div>

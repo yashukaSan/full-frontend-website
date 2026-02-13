@@ -17,19 +17,19 @@ function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <h3 className="font-['Raleway'] font-bold text-2xl tracking-tighter text-pink-950 uppercase">
-              Lilac <span className="text-pink-400 font-light">Studio</span>
+              SAKURA <span className="text-pink-400 font-light">THEME</span>
             </h3>
             <div className="space-y-3 text-pink-900/70 font-['Roboto'] leading-relaxed">
               <p className="flex items-center gap-2 font-['Lora'] italic">
                 <MapPin size={16} className="text-pink-300" />
-                123 Example Road Minneapolis, MN
+                123th Street 45 W, Santa Monica, CA 90401
               </p>
               <a
                 href="mailto:email@example.com"
                 className="flex items-center gap-2 hover:text-pink-600 transition-colors"
               >
                 <Mail size={16} className="text-pink-300" />
-                email@example.com
+                dr.maya@example.com
               </a>
               <p className="flex items-center gap-2">
                 <Phone size={16} className="text-pink-300" />
@@ -55,11 +55,12 @@ function Footer() {
             </div>
 
             {/* Navigation Column */}
-            <div className="flex flex-col space-y-4 px-2">
+            <div className="flex flex-col justify-center rounded-xl space-y-4 px-2">
               <h3 className="font-['Raleway'] font-bold text-pink-950 uppercase tracking-widest text-xs mb-2">
                 Explore
               </h3>
-              {["Home", "Contacts", "Blog"].map((item) => (
+              <div className="grid h-[65%]">
+              {["Home", "Contacts", "Blog", "Office"].map((item) => (
                 <p
                   key={item}
                   onClick={() => router.push(`/${item.toLowerCase()}`)}
@@ -72,13 +73,14 @@ function Footer() {
                   {item}
                 </p>
               ))}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Legal Section */}
-        <div className="border-t border-pink-100 pt-10 mt-10">
-          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+        <div className="border-t border-pink-100 pt-10 mt-10 flex justify-center">
+          <div className="sm:flex lg:grid flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
             <ul className="flex flex-wrap gap-x-8 gap-y-3">
               <li>
                 <a className={footerLink}>Privacy & Cookies Policy</a>
@@ -94,15 +96,9 @@ function Footer() {
               </li>
             </ul>
 
-            <div className="text-right">
-              <p className="text-xs text-pink-900/40 font-['Open_Sans'] tracking-wide">
+            <div className="text-right sm:m-auto border-black ">
+              <p className="text-xs center text-pink-900/40 font-['Open_Sans'] tracking-wide">
                 All Rights Reserved &copy; 2024 Your Business Name Here, LLC.
-              </p>
-              <p className="text-xs text-pink-900/40 mt-1 font-['Open_Sans']">
-                Template Credits:{" "}
-                <a className="text-pink-300 hover:text-pink-500 underline decoration-dotted">
-                  Go Bloom Creative
-                </a>
               </p>
             </div>
           </div>
