@@ -140,7 +140,7 @@ export default function Home() {
       {/* --- FAQ & BACKGROUND --- */}
       <section className={`${sectionBase} bg-purple-50/50`}>
         <div className="max-w-4xl mx-auto w-full">
-          <h2 className="text-4xl font-bold text-center mb-12">Common Questions</h2>
+          <h2 className="text-4xl font-bold text-violet-400 text-center mb-12">Common Questions</h2>
           <div className="space-y-6">
             {[
               { q: "Do you take insurance?", a: "I am an out-of-network provider but can provide superbills for reimbursement." },

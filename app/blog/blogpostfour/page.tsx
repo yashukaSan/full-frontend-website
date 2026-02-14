@@ -2,7 +2,7 @@
 import { useRouter } from 'next/navigation';
 import Header from '../../Header';
 import Footer from '../../Footer';
-import { ArrowLeft, Calendar, Quote, Sparkles } from 'lucide-react';
+import { ArrowLeft, Calendar, Quote, Sparkles, ChevronLeft } from 'lucide-react';
 
 function BlogPostFour() {
     const router = useRouter();
@@ -38,7 +38,6 @@ function BlogPostFour() {
                             It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.
                         </p>
                         
-                        {/* Pull Quote / Accent Text */}
                         <div className="my-12 p-8 bg-purple-50 rounded-3xl border-l-4 border-emerald-500 relative">
                             <Quote className="absolute -top-4 -left-2 text-emerald-200" size={40} />
                             <p className="text-xl font-sans font-medium text-purple-900 italic leading-relaxed">
@@ -55,23 +54,34 @@ function BlogPostFour() {
                         </p>
                     </div>
 
-                    {/* --- NAVIGATION: Accent Bold Green --- */}
-                    <div className="pt-10 border-t border-purple-100 flex justify-between items-center">
-                        <button 
-                            onClick={() => router.back()}
-                            className="group flex items-center gap-2 text-emerald-600 font-bold text-sm tracking-widest uppercase transition-all hover:gap-4"
-                        >
-                            <ArrowLeft size={18} /> Back to Blog
-                        </button>
+                    {/* --- NAVIGATION: Updated with Previous Blog Button --- */}
+                    <div className="pt-10 border-t border-purple-100 flex flex-col sm:flex-row justify-between items-center gap-6">
+                        <div className="flex flex-col gap-4 w-full sm:w-auto">
+                            {/* Browser Back Button */}
+                            <button 
+                                onClick={() => router.back()}
+                                className="group flex items-center gap-2 text-gray-400 font-bold text-[10px] tracking-[0.2em] uppercase transition-all hover:text-purple-600"
+                            >
+                                <ArrowLeft size={14} /> Back
+                            </button>
+
+                            {/* Specific Previous Blog Link */}
+                            <button 
+                                onClick={() => router.push('/blog/blogpostthree')}
+                                className="group flex items-center gap-3 text-emerald-600 font-sans font-bold text-sm tracking-widest uppercase transition-all hover:text-emerald-700 bg-emerald-50 px-6 py-3 rounded-full border border-emerald-100"
+                            >
+                                <ChevronLeft size={18} className="group-hover:-translate-x-1 transition-transform" /> 
+                                Previous Blog
+                            </button>
+                        </div>
                         
-                        <div className="flex gap-2">
-                             <Sparkles size={18} className="text-purple-200" />
+                        <div className="hidden sm:flex gap-2">
+                             <Sparkles size={18} className="text-purple-200 animate-pulse" />
                         </div>
                     </div>
                 </article>
             </main>
-
-            {/* --- MINI CTA: Footer Transition --- */}
+            {/* --- MINI CTA --- */}
             <section className="py-20 bg-purple-50 flex flex-col items-center text-center px-6">
                 <h3 className="font-sans font-bold text-2xl text-gray-900 mb-4">Enjoyed this read?</h3>
                 <p className="text-gray-500 mb-8 max-w-md">Join my newsletter for weekly insights on wellness and creativity.</p>
